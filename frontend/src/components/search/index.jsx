@@ -18,7 +18,8 @@ const Search = () => {
         setloading(true);
         setErrorMessage("");
         const response = await axios.get(
-          "http://localhost:3001/countries/" + countryname
+          "https://vercel-development-backend.vercel.app/api/countries/" +
+            countryname
         );
         const foundCountry = response.data;
 
