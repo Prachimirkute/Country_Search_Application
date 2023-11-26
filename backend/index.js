@@ -9,6 +9,7 @@ app.use(cors());
 app.get('/',  (req, res) => {
 res.send("server start");
 });
+
 app.get('/countries/:country', async (req, res) => {
   const country = req.params.country;
   try {

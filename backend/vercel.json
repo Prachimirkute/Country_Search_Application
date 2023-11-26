@@ -6,14 +6,11 @@
         "use": "@vercel/node"
       }
     ],
-    "routes": [
-      {
-        "src": "/api/countryList/(.*)",
-        "dest": "/api/countryList"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/"
-      }
+    "routes": 
+        [
+            { "src": "/countries/:country", "dest": "/countries/:country" },
+            { "src": "/api/countryList", "dest": "/api/countryList" },
+            { "src": "/(.*)", "dest": "/" }
+          
     ]
   }
