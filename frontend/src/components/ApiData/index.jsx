@@ -37,7 +37,7 @@ const ApiData = () => {
       <div className="App">
         <div className="container">
           <div className="row">
-            <h6 className="headerList">List for all Countrys</h6>
+            {/* <h6 className="headerList">List for all Countrys</h6> */}
             {countries.map((selectedCountry, id) => (
               <div key={selectedCountry.id} className="col cardM">
                 <div className="card cardShadow searchList">
