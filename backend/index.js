@@ -6,6 +6,9 @@ const PORT = 3001;
 
 app.use(cors()); 
 
+app.get('/',  (req, res) => {
+console.log("first")
+});
 app.get('/countries/:country', async (req, res) => {
   const country = req.params.country;
   try {
@@ -18,7 +21,6 @@ app.get('/countries/:country', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
-
 app.get('/api/countryList', async (req, res) => {
   try {
     const response = await axios.get('https://restcountries.com/v3.1/all');
