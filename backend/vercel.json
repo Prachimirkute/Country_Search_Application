@@ -8,9 +8,7 @@
     ],
     "routes": 
         [
-            { "src": "/countries/:country", "dest": "/countries/:country" },
-            { "src": "/api/countryList", "dest": "/api/countryList" },
-            { "src": "/(.*)", "dest": "/" }
+            { "src": "/(.*)", "dest": "/index.js" }
           
     ]
   }
