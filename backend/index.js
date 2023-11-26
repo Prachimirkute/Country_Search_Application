@@ -7,7 +7,7 @@ const PORT = 3001;
 app.use(cors()); 
 
 app.get('/',  (req, res) => {
-console.log("first")
+res.send("server start");
 });
 app.get('/countries/:country', async (req, res) => {
   const country = req.params.country;
