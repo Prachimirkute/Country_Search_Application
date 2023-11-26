@@ -15,7 +15,8 @@ app.get('/countries/:country', async (req, res) => {
     const response = await axios.get(`https://restcountries.com/v3.1/name/${country}?fullText=true`);
     debugger;
     const countryInfo = response.data[0];
-    res.json(countryInfo);
+    const result = res.json(countryInfo);
+    res.send(result);
   } catch (error) {
     console.error('Error fetching country information', error);
     res.status(500).json({ error: 'Internal Server Error' });
@@ -24,7 +25,8 @@ app.get('/countries/:country', async (req, res) => {
 app.get('/api/countryList', async (req, res) => {
   try {
     const response = await axios.get('https://restcountries.com/v3.1/all');
-    res.json(response.data);
+    const result = res.json(response.data);
+    res.send(result);
   } catch (error) {
     console.error('Error fetching country information', error);
     res.status(500).json({ error: 'Internal Server Error' });
