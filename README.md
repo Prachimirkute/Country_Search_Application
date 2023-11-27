@@ -61,12 +61,28 @@ $ npm start
 ### Backend :
 
 installation Node.js project
-1 npm init -y
+
+```sh
+$ npm init -y
+```
+
 It is designed to simplify the process of building robust and scalable web applications and APIs.
-2 npm install express
-3 run comand : node index.js
+
+```sh
+$ npm install express
+```
+
+Run server
+
+```sh
+$ node index.js
+```
+
 Axios is a popular library for making HTTP requests.
-4 npm install axios
+
+```sh
+$ npm install axios
+```
 
 The React development server will be running on https://vercel-development-frontend.vercel.app
 Open your browser and navigate to https://vercel-development-frontend.vercel.app to use the application.
