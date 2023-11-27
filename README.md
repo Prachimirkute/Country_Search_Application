@@ -4,10 +4,10 @@ A simple application to fetch and display information about a country.
 
 ## Technologies Used
 
-- Frontend : [React]
-- Backend : [Node.js] , [express.js]
-- [Axios] (for making HTTP requests)
-- Deployment : [vercel]
+- Frontend : React
+- Backend : Node.js , express.js
+- Axios (for making HTTP requests)
+- Deployment : vercel
 
 ## Discription
 
@@ -16,22 +16,22 @@ This project consists of a React frontend interface that allows users to input a
 1. Fetch All Country Information from the Backend:
    When the frontend application loads, you can make an initial request to the backend endpoint that fetches information for all countries. This information can be stored on the frontend and used to quickly display details when users search for a specific country.
 
-Implementation:
-Create a backend endpoint (api/countryList) that fetches information for all countries.
-On the frontend, make an initial API request to this endpoint when the application loads.
+- Implementation:
+  Create a backend endpoint (api/countryList) that fetches information for all countries.
+  On the frontend, make an initial API request to this endpoint when the application loads.
 
 2. User-Friendly Interface to Input a Country Name:
    Provide a simple and user-friendly input field in the frontend where users can type the name of the country they want to search.
 
-Implementation:
-Use a text input field in the frontend for users to enter the country name.
+- Implementation:
+  Use a text input field in the frontend for users to enter the country name.
 
 3. Quickly Display Specific Country Information:
    When a user enters a country name, the frontend should quickly display relevant information about that country without requiring a page refresh.
 
-Implementation:
-Use asynchronous requests to the backend (api/countries) when the user enters a country name.
-Dynamically update the frontend interface to display relevant information.
+- Implementation:
+  Use asynchronous requests to the backend (api/countries) when the user enters a country name.
+  Dynamically update the frontend interface to display relevant information.
 
 Display the relevant information received from the backend on the frontend interface.
 Show basic information about the country, such as its name, flag, capital.
@@ -89,7 +89,7 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 
 ## Folder Structure
 
-.
+`
 ├── backend/ # NodeJS backend server
 │ ├── api/ # API-related files
 │ │ ├── countries.js # Handling API routes for countries
@@ -115,7 +115,9 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 ├── package-lock.json # Dependency control file for ensuring consistent package versions
 ├── package.json # NodeJS project configuration
 ├── README.md # Project documentation
-└── ...
+└──
+
+```
 
 ## Deployment
 
@@ -139,3 +141,4 @@ when changes are pushed to GitHub repository, follow these steps:
 - Scroll down to the "GitHub" section and click "Install" to link your Vercel project with your GitHub repository.
 - import the project and select root directory of the project and deploy project
 - Once the deployment is complete, Vercel will provide you with a live URL. Access your deployed application using this [https://vercel-development-frontend.vercel.app/].
+```
