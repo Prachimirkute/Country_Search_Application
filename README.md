@@ -79,7 +79,7 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 │ ├── index.js # Express server configuration
 │ ├── package-lock.json # Dependency control file for ensuring consistent package versions
 │ ├── package.json # NodeJS project configuration
-│ ├── vercel.json # Vercel deployments configuration
+│ └── vercel.json # Vercel deployments configuration
 
 ├── frontend/ # React frontend application
 │ ├── node_modules/ # Node modules and dependencies
@@ -92,9 +92,9 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 │ │ └── App.js # Main React application component
 │ ├── package.json # React project configuration
 
-│ ├── .gitignore # Git ignore file
-│ ├── package-lock.json # Dependency control file for ensuring consistent package versions
-│ ├── package.json # NodeJS project configuration
+├── .gitignore # Git ignore file
+├── package-lock.json # Dependency control file for ensuring consistent package versions
+├── package.json # NodeJS project configuration
 ├── README.md # Project documentation
 └── ...
 
