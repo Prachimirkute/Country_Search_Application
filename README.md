@@ -105,6 +105,21 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 │ ├── public/ # Public assets
 │ ├── src/ # Source code
 │ │ ├── components/ # React components
+│ │ │     ├── ApiData / # ApiData components
+│ │ │     │      ├── index.jsx / # ApiData jsx file
+│ │ │     │      ├── style.css / # ApiData css file
+│ │ │     ├── countryListPopup/ # countryListPopup components
+│ │ │     │      ├── index.jsx / # countryListPopup jsx file
+│ │ │     │      ├── style.css / # countryListPopup css file
+│ │ │     ├── Footer / # Footer components
+│ │ │     │      ├── index.jsx / # Footer jsx file
+│ │ │     │      ├── style.css / # Footer css file
+│ │ │     ├── header/ # header components
+│ │ │     │      ├── index.jsx / # header jsx file
+│ │ │     │      ├── style.css / # header css file
+│ │ │     ├── search/ # search components
+│ │ │     │      ├── index.jsx / # search jsx file
+│ │ │     │      ├── style.css / # search css file
 │ │ ├── App.css
 │ │ ├── App.js  # Main React application component
 │ │ ├── App.test.js
