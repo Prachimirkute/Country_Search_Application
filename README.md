@@ -136,9 +136,9 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 
 ```
 
-## Project I
+## Project photos
 
-![Project Logo](https://github.com/your-username/your-repository/raw/main/images/logo.png)
+![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo1.png)
 
 ## Deployment
 
