@@ -136,8 +136,13 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 
 ```
 
+## Project I
+
+![Project Logo](https://github.com/your-username/your-repository/raw/main/images/logo.png)
+
 ## Deployment
 
+```
 This project is deployed using Vercel with GitHub integration.
 
 Follow these steps to deploy the application using Vercel and GitHub:
@@ -158,7 +163,5 @@ when changes are pushed to GitHub repository, follow these steps:
 - Scroll down to the "GitHub" section and click "Install" to link your Vercel project with your GitHub repository.
 - import the project and select root directory of the project and deploy project
 - Once the deployment is complete, Vercel will provide you with a live URL. Access your deployed application using this [https://vercel-development-frontend.vercel.app/].
-
-```
 
 ```

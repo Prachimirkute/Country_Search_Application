@@ -58,7 +58,7 @@ const Search = () => {
   };
   return (
     <div>
-      <div className="searchList">
+      <div className="searchListInput">
         <div className="input-wrapper ">
           <input
             placeholder="Search Country Name"
