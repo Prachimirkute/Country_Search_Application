@@ -105,17 +105,19 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 │ ├── public/ # Public assets
 │ ├── src/ # Source code
 │ │ ├── components/ # React components
-│ │ ├── pages/ # Main application pages
-│ │ ├── services/ # API service functions
-│ │ ├── styles/ # Stylesheets
-│ │ └── App.js # Main React application component
+│ │ ├── App.css
+│ │ ├── App.js  # Main React application component
+│ │ ├── App.test.js
+│ │ ├── index.css
+│ │ ├── index.js
+│ │ ├── logo.svg
+│ │ ├── reportWebVitals.js
+│ │ ├── setupTests.js
+│ ├── .gitignore # Git ignore file
+│ ├── package-lock.json # Dependency control file for ensuring consistent package versions
 │ ├── package.json # React project configuration
 
-├── .gitignore # Git ignore file
-├── package-lock.json # Dependency control file for ensuring consistent package versions
-├── package.json # NodeJS project configuration
-├── README.md # Project documentation
-└──
+├── README.md # For Project documentation
 
 ```
 
