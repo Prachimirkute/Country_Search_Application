@@ -72,17 +72,16 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 
 .
 ├── backend/ # NodeJS backend server
-│ ├── api
-├──────├── countries.js # for api routes
-├──────├── countryList.js # for api routes
+│ ├── api/ # API-related files
+│ │ ├── countries.js # Handling API routes for countries
+│ │ ├── countryList.js # Handling API routes for country lists
 │ ├── node_modules/ # Node modules and dependencies
 │ ├── index.js # Express server configuration
-│ ├── package-lock.json # Dependency control file for ensuring consistent package versions.
+│ ├── package-lock.json # Dependency control file for ensuring consistent package versions
 │ ├── package.json # NodeJS project configuration
 │ ├── vercel.json # Vercel deployments configuration
 
 ├── frontend/ # React frontend application
-
 │ ├── node_modules/ # Node modules and dependencies
 │ ├── public/ # Public assets
 │ ├── src/ # Source code
@@ -92,8 +91,10 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 │ │ ├── styles/ # Stylesheets
 │ │ └── App.js # Main React application component
 │ ├── package.json # React project configuration
-│ └── ...
-├── .gitignore # Git ignore file
+
+│ ├── .gitignore # Git ignore file
+│ ├── package-lock.json # Dependency control file for ensuring consistent package versions
+│ ├── package.json # NodeJS project configuration
 ├── README.md # Project documentation
 └── ...
 
