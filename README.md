@@ -50,10 +50,13 @@ Responsive Design: Ensure that the frontend application is responsive and works 
 ### Frontend :
 
 installation React project
-1 npm install
+
+```sh
+$ npm install
 2 npx create-react-app frontend
 3 cd frontend
 3 run comand : npm start
+```
 
 ### Backend :
 
