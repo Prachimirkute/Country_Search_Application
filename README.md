@@ -89,7 +89,7 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 
 ## Folder Structure
 
-`
+```
 ├── backend/ # NodeJS backend server
 │ ├── api/ # API-related files
 │ │ ├── countries.js # Handling API routes for countries
@@ -141,4 +141,7 @@ when changes are pushed to GitHub repository, follow these steps:
 - Scroll down to the "GitHub" section and click "Install" to link your Vercel project with your GitHub repository.
 - import the project and select root directory of the project and deploy project
 - Once the deployment is complete, Vercel will provide you with a live URL. Access your deployed application using this [https://vercel-development-frontend.vercel.app/].
+
+```
+
 ```
