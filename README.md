@@ -53,9 +53,9 @@ installation React project
 
 ```sh
 $ npm install
-2 npx create-react-app frontend
-3 cd frontend
-3 run comand : npm start
+$ npx create-react-app frontend
+$ cd frontend
+$ npm start
 ```
 
 ### Backend :
