@@ -4,10 +4,10 @@ A simple application to fetch and display information about a country.
 
 ## Technologies Used
 
-Frontend : React
-Backend : Node.js , express.js
-Axios (for making HTTP requests)
-Deployment : vercel
+- Frontend : [React]
+- Backend : [Node.js] , [express.js]
+- [Axios] (for making HTTP requests)
+- Deployment : [vercel]
 
 ## Discription
 
