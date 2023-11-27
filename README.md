@@ -47,7 +47,7 @@ Responsive Design: Ensure that the frontend application is responsive and works 
 
 ## Installation:
 
-# Frontend :
+### Frontend :
 
 installation React project
 1 npm install
@@ -55,7 +55,7 @@ installation React project
 3 cd frontend
 3 run comand : npm start
 
-# Backend :
+### Backend :
 
 installation Node.js project
 1 npm init -y
@@ -70,6 +70,7 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 
 ## Folder Structure
 
+.
 ├── backend/ # NodeJS backend server
 │ ├── api
 ├──────├── countries.js # for api routes
