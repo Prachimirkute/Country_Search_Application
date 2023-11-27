@@ -139,6 +139,10 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 ## Project photos
 
 ![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo1.png)
+![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo2.png)
+![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo3.png)
+![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo4.png)
+![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo5.png)
 
 ## Deployment
 
