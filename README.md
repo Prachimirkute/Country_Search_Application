@@ -187,8 +187,6 @@ The Footer component represents the footer section of your application, includin
 
 ## Deployment
 
-````
-
 This project is deployed using Vercel with GitHub integration.
 
 Follow these steps to deploy the application using Vercel and GitHub:
@@ -202,7 +200,7 @@ Follow these steps to deploy the application using Vercel and GitHub:
    npm install -g vercel
    Login to Vercel:
    login to your Vercel account
-````
+```
 
 GitHub repository contains a vercel.json configuration file for custom configuration settings.
 
@@ -213,8 +211,6 @@ when changes are pushed to GitHub repository, follow these steps:
 - import the project and select root directory of the project and deploy project
 - Once the deployment is complete, Vercel will provide you with a live URL. Access your deployed application using this [https://vercel-development-frontend.vercel.app/].
 
-```
-
 ## Project photos
 
 ![Project photo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo1.png)
@@ -222,4 +218,3 @@ when changes are pushed to GitHub repository, follow these steps:
 ![Project photo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo3.png)
 ![Project photo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo4.png)
 ![Project photo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo5.png)
-```
