@@ -11,30 +11,21 @@ A simple application to fetch and display information about a country.[Run Proje
 ## Discription
 
 ```
-This project consists of a React frontend interface that allows users to input a country's name. The frontend makes requests to a NodeJS backend server, which in turn fetches information about the specified country from the [countries API](https://restcountries.com/v3.1/all). The retrieved information is then rendered back to the user in an easily understandable format.
+This project consists of a React frontend interface that allows users to input a country's name. The frontend makes requests to a NodeJS backend server, which is Fetch all Country Information and the specified Country Information from the countries API. The retrieved information is then rendered back to the user in an easily understandable format.
 
 1. Fetch All Country Information from the Backend:
    When the frontend application loads, you can make an initial request to the backend endpoint that fetches information for all countries. This information can be stored on the frontend and used to quickly display details when users search for a specific country.
-
-- Implementation:
-  Create a backend endpoint (api/countryList) that fetches information for all countries.
-  On the frontend, make an initial API request to this endpoint when the application loads.
+ - Create a backend endpoint (api/countryList) that fetches information for all countries.
+ - On the frontend, make an initial API request to this endpoint when the application loads and display all   frontend data.
 
 2. User-Friendly Interface to Input a Country Name:
    Provide a simple and user-friendly input field in the frontend where users can type the name of the country they want to search.
-
-- Implementation:
-  Use a text input field in the frontend for users to enter the country name.
+   - Use a text input field in the frontend for users to enter the country name.
 
 3. Quickly Display Specific Country Information:
-   When a user enters a country name, the frontend should quickly display relevant information about that country without requiring a page refresh.
-
-- Implementation:
-  Use asynchronous requests to the backend (api/countries) when the user enters a country name.
-  Dynamically update the frontend interface to display relevant information.
-
-Display the relevant information received from the backend on the frontend interface.
-Show basic information about the country, such as its name, flag, capital.
+   When a user enters a country name, the frontend should quickly display relevant information about that.
+   - Use asynchronous requests to the backend (api/countries) when the user enters a country name.
+     Dynamically update the frontend interface to display relevant information.
 
 4. Read More Button for Additional Information:
    Provided a "Read More" button that users can click to access additional detailed information about the country.
@@ -137,142 +128,39 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 
 ```
 
-# Component Structure
+## Component Structure
 
-## Search Component
+### Application Structure
+
+The App component is the main entry point of your application. It organizes the structure of your app by incorporating various components.
+
+### ApiData Component
+
+The ApiData component fetches a list of countries from an external API and displays basic information about each country. It provides functionality to view more details about a selected country in a popup.
+
+#### State Variables
+
+- `CountryInformation`: Holds additional information about the selected country for popup display.
+- `countries`: Stores an array of country data retrieved from the API.
+- `ErrorMessage`: Stores error messages, if any.
+
+#### Functions
+
+- `CountryMoreDetails`: Sets the CountryInformation state with details of the selected country, triggering the display of additional information in a popup.
+- `closePopup`: Closes the popup by resetting the CountryInformation state.
+
+### CountryListPopup Component
+
+The CountryListPopup component displays detailed information about a selected country in a popup. It covers various aspects such as official name, capital, currency, region, subregion, population, languages, native names, alternate spellings, and translations.
+
+- `countryData`: The detailed information about the selected country.
+- `onClose`: A function to close the popup.
+
+### Search Component
 
 The `Search` component is responsible for allowing users to search for country information. It integrates with a backend API to fetch details about the entered country name and displays relevant information. Additionally, it provides a popup feature to view more details about a selected country.
 
-```jsx
-import { useState } from "react";
-import { FaSearch } from "react-icons/fa";
-import CountryListPopup from "../countryListPopup";
-import axios from "axios";
-import "./style.css";
-
-const Search = () => {
-  const [countryname, serachCountry] = useState("");
-  const [selectedCountry, setSelectedCountry] = useState(null);
-  const [CountryInformation, setCountryInformation] = useState(null);
-  const [isClicked, setIsClicked] = useState(false);
-  const [loading, setloading] = useState(false);
-  const [ErrorMessage, setErrorMessage] = useState(false);
-
-  const handleSubmit = async () => {
-    if (countryname) {
-      try {
-        setloading(true);
-        setErrorMessage("");
-        const response = await axios.get(
-          "https://vercel-development-backend.vercel.app/api/countries/" +
-            countryname
-        );
-        const foundCountry = response.data;
-
-        if (foundCountry) {
-          setSelectedCountry(foundCountry);
-          setIsClicked(true);
-          console.log(foundCountry);
-        } else {
-          console.log("Country not found. Please enter a valid country name.");
-          setIsClicked(false);
-          setErrorMessage(
-            "Country not found. Please enter a valid country name."
-          );
-        }
-      } catch (error) {
-        setSelectedCountry(null);
-        setIsClicked(false);
-        serachCountry("");
-        setErrorMessage(
-          "Country not found. Please enter a valid country name."
-        );
-      } finally {
-        setloading(false);
-      }
-    } else {
-      setErrorMessage("Please enter country name ");
-    }
-  };
-
-  const CountryMoreDetails = (selectedCountry) => {
-    setCountryInformation(selectedCountry);
-  };
-
-  const closePopup = () => {
-    setCountryInformation("");
-  };
-  return (
-    <div>
-      <div className="searchListInput">
-        <div className="input-wrapper ">
-          <input
-            placeholder="Search Country Name"
-            type="text"
-            required
-            value={countryname}
-            onChange={(e) => {
-              if (e.target.value) {
-                serachCountry(e.target.value);
-              } else {
-                setSelectedCountry(null);
-                setIsClicked(false);
-                serachCountry("");
-              }
-            }}
-          />
-          <FaSearch id="search-icon" onClick={handleSubmit} />
-        </div>
-      </div>
-
-      <div className="App">
-        <div className="container">
-          <div className="row">
-            {loading && (
-              <div className="loader-container">
-                <img src="/loader.gif" alt="Loading..." />
-              </div>
-            )}
-            {ErrorMessage && <p className="error">{ErrorMessage}</p>}
-
-            {isClicked && (
-              <div className="col cardM">
-                <div className="card cardShadow searchList">
-                  <img
-                    className="card-img-top cardImage"
-                    src={selectedCountry.flags.png}
-                    height="200px"
-                    alt=""
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">
-                      Name: {selectedCountry.name.common}
-                    </h5>
-                    <p className="card-text">
-                      Capital : {selectedCountry.capital}
-                    </p>
-                    <div
-                      className="btn cardBtn"
-                      onClick={() => CountryMoreDetails(selectedCountry)}
-                    >
-                      Read more country data
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-      {/* open popup */}
-      <CountryListPopup countryData={CountryInformation} onClose={closePopup} />
-    </div>
-  );
-};
-export default Search;
-```
-
-### State Variables
+#### State Variables
 
 - `countryname`: Holds the user-entered country name for searching.
 - `selectedCountry`: Stores the details of the selected country.
@@ -281,7 +169,7 @@ export default Search;
 - `loading`: Indicates whether data is currently being fetched.
 - `ErrorMessage`: Stores error messages, if any.
 
-### Functions
+#### Functions
 
 - **`handleSubmit`**: Triggers the country search when the user submits the form. It makes an API call to retrieve information based on the entered country name and updates the state accordingly.
 
@@ -289,10 +177,18 @@ export default Search;
 
 - **`closePopup`**: Closes the popup by resetting the `CountryInformation` state.
 
-## Usage
+### Header Component
+
+The Header component represents the header section of your application. It includes a logo,
+
+### Footer Component
+
+The Footer component represents the footer section of your application, including copyright information and social media links.
+
+### Usage
 
 ```jsx
-import Search from './Search';
+import Search from "./Search";
 
 const App = () => {
   return (
@@ -303,12 +199,11 @@ const App = () => {
 };
 
 export default App;
-
-
+```
 
 ## Deployment
 
-```
+````
 
 This project is deployed using Vercel with GitHub integration.
 
@@ -323,7 +218,7 @@ Follow these steps to deploy the application using Vercel and GitHub:
    npm install -g vercel
    Login to Vercel:
    login to your Vercel account
-```
+````
 
 GitHub repository contains a vercel.json configuration file for custom configuration settings.
 
