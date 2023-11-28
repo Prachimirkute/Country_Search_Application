@@ -1,6 +1,6 @@
 ## Search Country Information Application
 
-A simple application to fetch and display information about a country.
+A simple application to fetch and display information about a country.[Run Project](https://vercel-development-frontend.vercel.app/)
 
 ## Technologies Used
 
@@ -11,6 +11,7 @@ A simple application to fetch and display information about a country.
 
 ## Discription
 
+```
 This project consists of a React frontend interface that allows users to input a country's name. The frontend makes requests to a NodeJS backend server, which in turn fetches information about the specified country from the [countries API](https://restcountries.com/v3.1/all). The retrieved information is then rendered back to the user in an easily understandable format.
 
 1. Fetch All Country Information from the Backend:
@@ -44,6 +45,7 @@ Error Handling: Implement proper error handling on both the frontend and backend
 Loading State: Show a loading indicator while waiting for the backend response.
 
 Responsive Design: Ensure that the frontend application is responsive and works well on different devices and screen sizes.
+```
 
 ## Installation:
 
@@ -136,14 +138,6 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 
 ```
 
-## Project photos
-
-![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo1.png)
-![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo2.png)
-![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo3.png)
-![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo4.png)
-![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo5.png)
-
 ## Deployment
 
 ```
@@ -169,3 +163,11 @@ when changes are pushed to GitHub repository, follow these steps:
 - Once the deployment is complete, Vercel will provide you with a live URL. Access your deployed application using this [https://vercel-development-frontend.vercel.app/].
 
 ```
+
+## Project photos
+
+![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo1.png)
+![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo2.png)
+![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo3.png)
+![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo4.png)
+![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo5.png)

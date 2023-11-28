@@ -8,7 +8,7 @@ const CountryListPopup = ({ countryData, onClose }) => {
   }
 
   return (
-    <div className="popup mLR">
+    <div className="popup mLR cardZIndex">
       <div className="popup-content">
         <span className="close" onClick={onClose}>
           &times;
