@@ -12,7 +12,7 @@ const ApiData = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://vercel-development-backend.vercel.app/api/countryList"
+          "https://country-search-application-backend.vercel.app/api/countryList"
         );
         setCountriesAllData(response.data);
       } catch (error) {

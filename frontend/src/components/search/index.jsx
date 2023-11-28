@@ -18,7 +18,7 @@ const Search = () => {
         setloading(true);
         setErrorMessage("");
         const response = await axios.get(
-          "https://vercel-development-backend.vercel.app/api/countries/" +
+          "https://country-search-application-backend.vercel.app/api/countries/" +
             countryname
         );
         const foundCountry = response.data;
@@ -118,7 +118,7 @@ const Search = () => {
           </div>
         </div>
       </div>
-      {/* Display the popup */}
+      {/* open popup */}
       <CountryListPopup countryData={CountryInformation} onClose={closePopup} />
     </div>
   );
