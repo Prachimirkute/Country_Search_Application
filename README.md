@@ -185,22 +185,6 @@ The Header component represents the header section of your application. It inclu
 
 The Footer component represents the footer section of your application, including copyright information and social media links.
 
-### Usage
-
-```jsx
-import Search from "./Search";
-
-const App = () => {
-  return (
-    <div>
-      <Search />
-    </div>
-  );
-};
-
-export default App;
-```
-
 ## Deployment
 
 ````
@@ -233,14 +217,9 @@ when changes are pushed to GitHub repository, follow these steps:
 
 ## Project photos
 
-```
-
 ![Project photo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo1.png)
 ![Project photo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo2.png)
 ![Project photo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo3.png)
 ![Project photo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo4.png)
 ![Project photo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo5.png)
-
-```
-
 ```
