@@ -5,8 +5,7 @@ A simple application to fetch and display information about a country.[Run Proje
 ## Technologies Used
 
 - Frontend : React
-- Backend : Node.js , express.js
-- Axios (for making HTTP requests)
+- Backend : Node.js , Express.js
 - Deployment : vercel
 
 ## Discription
@@ -138,20 +137,193 @@ Open your browser and navigate to https://vercel-development-frontend.vercel.app
 
 ```
 
+# Component Structure
+
+## Search Component
+
+The `Search` component is responsible for allowing users to search for country information. It integrates with a backend API to fetch details about the entered country name and displays relevant information. Additionally, it provides a popup feature to view more details about a selected country.
+
+```jsx
+import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
+import CountryListPopup from "../countryListPopup";
+import axios from "axios";
+import "./style.css";
+
+const Search = () => {
+  const [countryname, serachCountry] = useState("");
+  const [selectedCountry, setSelectedCountry] = useState(null);
+  const [CountryInformation, setCountryInformation] = useState(null);
+  const [isClicked, setIsClicked] = useState(false);
+  const [loading, setloading] = useState(false);
+  const [ErrorMessage, setErrorMessage] = useState(false);
+
+  const handleSubmit = async () => {
+    if (countryname) {
+      try {
+        setloading(true);
+        setErrorMessage("");
+        const response = await axios.get(
+          "https://vercel-development-backend.vercel.app/api/countries/" +
+            countryname
+        );
+        const foundCountry = response.data;
+
+        if (foundCountry) {
+          setSelectedCountry(foundCountry);
+          setIsClicked(true);
+          console.log(foundCountry);
+        } else {
+          console.log("Country not found. Please enter a valid country name.");
+          setIsClicked(false);
+          setErrorMessage(
+            "Country not found. Please enter a valid country name."
+          );
+        }
+      } catch (error) {
+        setSelectedCountry(null);
+        setIsClicked(false);
+        serachCountry("");
+        setErrorMessage(
+          "Country not found. Please enter a valid country name."
+        );
+      } finally {
+        setloading(false);
+      }
+    } else {
+      setErrorMessage("Please enter country name ");
+    }
+  };
+
+  const CountryMoreDetails = (selectedCountry) => {
+    setCountryInformation(selectedCountry);
+  };
+
+  const closePopup = () => {
+    setCountryInformation("");
+  };
+  return (
+    <div>
+      <div className="searchListInput">
+        <div className="input-wrapper ">
+          <input
+            placeholder="Search Country Name"
+            type="text"
+            required
+            value={countryname}
+            onChange={(e) => {
+              if (e.target.value) {
+                serachCountry(e.target.value);
+              } else {
+                setSelectedCountry(null);
+                setIsClicked(false);
+                serachCountry("");
+              }
+            }}
+          />
+          <FaSearch id="search-icon" onClick={handleSubmit} />
+        </div>
+      </div>
+
+      <div className="App">
+        <div className="container">
+          <div className="row">
+            {loading && (
+              <div className="loader-container">
+                <img src="/loader.gif" alt="Loading..." />
+              </div>
+            )}
+            {ErrorMessage && <p className="error">{ErrorMessage}</p>}
+
+            {isClicked && (
+              <div className="col cardM">
+                <div className="card cardShadow searchList">
+                  <img
+                    className="card-img-top cardImage"
+                    src={selectedCountry.flags.png}
+                    height="200px"
+                    alt=""
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">
+                      Name: {selectedCountry.name.common}
+                    </h5>
+                    <p className="card-text">
+                      Capital : {selectedCountry.capital}
+                    </p>
+                    <div
+                      className="btn cardBtn"
+                      onClick={() => CountryMoreDetails(selectedCountry)}
+                    >
+                      Read more country data
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+      {/* open popup */}
+      <CountryListPopup countryData={CountryInformation} onClose={closePopup} />
+    </div>
+  );
+};
+export default Search;
+```
+
+### State Variables
+
+- `countryname`: Holds the user-entered country name for searching.
+- `selectedCountry`: Stores the details of the selected country.
+- `CountryInformation`: Keeps additional information about the selected country for popup display.
+- `isClicked`: Represents whether the user has clicked on a country.
+- `loading`: Indicates whether data is currently being fetched.
+- `ErrorMessage`: Stores error messages, if any.
+
+### Functions
+
+- **`handleSubmit`**: Triggers the country search when the user submits the form. It makes an API call to retrieve information based on the entered country name and updates the state accordingly.
+
+- **`CountryMoreDetails`**: Sets the `CountryInformation` state with details of the selected country, triggering the display of additional information in a popup.
+
+- **`closePopup`**: Closes the popup by resetting the `CountryInformation` state.
+
+## Usage
+
+```jsx
+import Search from './Search';
+
+const App = () => {
+  return (
+    <div>
+      <Search />
+    </div>
+  );
+};
+
+export default App;
+
+
+
 ## Deployment
 
 ```
+
 This project is deployed using Vercel with GitHub integration.
 
 Follow these steps to deploy the application using Vercel and GitHub:
 
-1. **Create a Vercel Account:**
+1. Vercel Account:
    sign up at [https://vercel.com].
 
-2. **Install Vercel CLI:**
+2. Install Vercel:
+
+```sh
    npm install -g vercel
    Login to Vercel:
    login to your Vercel account
+```
 
 GitHub repository contains a vercel.json configuration file for custom configuration settings.
 
@@ -166,8 +338,14 @@ when changes are pushed to GitHub repository, follow these steps:
 
 ## Project photos
 
-![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo1.png)
-![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo2.png)
-![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo3.png)
-![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo4.png)
-![Project Logo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo5.png)
+```
+
+![Project photo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo1.png)
+![Project photo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo2.png)
+![Project photo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo3.png)
+![Project photo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo4.png)
+![Project photo](https://github.com/Prachimirkute/vercel-development/blob/main/frontend/public/photo5.png)
+
+```
+
+```
