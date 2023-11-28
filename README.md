@@ -1,6 +1,6 @@
 ## Search Country Information Application
 
-A simple application to fetch and display information about a country.[Run Project](https://vercel-development-frontend.vercel.app/)
+A simple application to fetch and display information about a country.[Run Project](https://country-search-application-frontend.vercel.app)
 
 ## Technologies Used
 
@@ -76,8 +76,8 @@ Axios is a popular library for making HTTP requests.
 $ npm install axios
 ```
 
-The React development server will be running on https://vercel-development-frontend.vercel.app
-Open your browser and navigate to https://vercel-development-frontend.vercel.app to use the application.
+The React development server will be running on https://country-search-application-frontend.vercel.app
+Open your browser and navigate to https://country-search-application-frontend.vercel.app to use the application.
 
 ## Folder Structure
 
@@ -209,7 +209,7 @@ when changes are pushed to GitHub repository, follow these steps:
 - Go to the Vercel Dashboard.
 - Scroll down to the "GitHub" section and click "Install" to link your Vercel project with your GitHub repository.
 - import the project and select root directory of the project and deploy project
-- Once the deployment is complete, Vercel will provide you with a live URL. Access your deployed application using this [https://vercel-development-frontend.vercel.app/].
+- Once the deployment is complete, Vercel will provide you with a live URL. Access your deployed application using this [https://country-search-application-frontend.vercel.app].
 
 ## Project photos
 
