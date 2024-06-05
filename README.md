@@ -1,6 +1,6 @@
 ## Search Country Information Application
 
-A simple application to fetch and display information about a country.[Run Project]((https://country-search-application-three.vercel.app)
+A simple application to fetch and display information about a country.[Run Project](https://country-search-application-azure.vercel.app)
 
 ## Technologies Used
 
@@ -209,7 +209,7 @@ when changes are pushed to GitHub repository, follow these steps:
 - Go to the Vercel Dashboard.
 - Scroll down to the "GitHub" section and click "Install" to link your Vercel project with your GitHub repository.
 - import the project and select root directory of the project and deploy project
-- Once the deployment is complete, Vercel will provide you with a live URL. Access your deployed application using this [https://country-search-application-frontend.vercel.app].
+- Once the deployment is complete, Vercel will provide you with a live URL. Access your deployed application using this [https://country-search-application-azure.vercel.app].
 
 ## Project photos
 
