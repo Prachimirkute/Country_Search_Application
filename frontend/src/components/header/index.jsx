@@ -14,7 +14,7 @@ const Header = () => {
           className="animatedImage"
           width="100"
           height="100"
-          src="https://bounceinsights.com/wp-content/uploads/2020/06/method-draw-image-1.svg"
+          src="/flags.gif"
         ></img>
       </div>
       <nav ref={navRef}>
