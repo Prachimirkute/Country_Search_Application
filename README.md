@@ -1,6 +1,6 @@
 ## Search Country Information Application
 
-A simple application to fetch and display information about a country.[Run Project](https://country-search-application-azure.vercel.app)
+A simple application to fetch and display information about a country.[Run Project](https://country-search-application-frontend-varcelgit.vercel.app/)
 
 ## Technologies Used
 
